@@ -1,4 +1,4 @@
-package mathlib
+package math
 
 func Sqrt(x float64) float64 {
 	z := 0.0

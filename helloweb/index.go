@@ -10,7 +10,7 @@ func handler(rw http.ResponseWriter,req *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/wcs2mw",handler)
+	http.HandleFunc("/cs2mw",handler)
 	http.ListenAndServe(":8080",nil)
 }
 

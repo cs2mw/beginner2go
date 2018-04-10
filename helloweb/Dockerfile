@@ -1,7 +1,7 @@
 # 得到最新的 golang docker 镜像
 FROM golang:latest
 
-MAINTAINER wcs2mw "wcs2mw@163.com"
+MAINTAINER cs2mw "wcs2mw@163.com"
 
 # 在容器内部创建一个目录来存储我们的 web 应用，接着使它成为工作目录。
 RUN mkdir -p /go/src/helloweb
