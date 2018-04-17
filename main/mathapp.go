@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cs2mw/beginner2go/lib/math"
+	"github.com/cs2mw/beginner2go/library/math"
 	"fmt"
 )
 
