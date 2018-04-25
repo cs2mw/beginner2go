@@ -10,15 +10,18 @@ import (
 	rf "github.com/ServiceComb/go-chassis/server/restful"
 )
 
+// CalculateBmi defines bmi struct
 type CalculateBmi struct {
 }
 
+// URLPatterns defines url routes
 func (c *CalculateBmi) URLPatterns() []rf.Route {
 	return []rf.Route{
 		{http.MethodGet, "/bmi", "Calculate"},
 	}
 }
 
+// Calculate controller
 func (c *CalculateBmi) Calculate(ctx *rf.Context) {
 
 	var height, weight, bmi float64
@@ -65,6 +68,7 @@ func (c *CalculateBmi) Calculate(ctx *rf.Context) {
 	ctx.WriteJSON(result, "application/json")
 }
 
+// BMIIndex implement BMI calculate algorithm
 func (c *CalculateBmi) BMIIndex(height, weight float64) (float64, error) {
 	if height <= 0 || weight <= 0 {
 		return 0, fmt.Errorf("Arugments must be above 0")
