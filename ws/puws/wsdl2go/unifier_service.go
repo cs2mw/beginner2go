@@ -1,4 +1,4 @@
-package unifierws
+package wsdl2go
 
 import (
 	"github.com/fiorix/wsdl2go/soap"
@@ -240,10 +240,6 @@ type ArrayOf_xsd_string struct {
 type FileObject struct {
 	Datahandler *DataHandler `xml:"datahandler,omitempty" json:"datahandler,omitempty" yaml:"datahandler,omitempty"`
 	Filename    *string      `xml:"filename,omitempty" json:"filename,omitempty" yaml:"filename,omitempty"`
-}
-
-// DataHandler is ?
-type DataHandler struct {
 }
 
 // XMLFileObject was auto-generated from WSDL.
