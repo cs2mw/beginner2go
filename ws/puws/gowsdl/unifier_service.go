@@ -23,6 +23,10 @@ type ArrayOftns2FileObject struct {
 	XMLName xml.Name `xml:"http://139.219.103.89:9000/ws/services/mainservice ArrayOf_tns2_FileObject"`
 }
 
+type DataHandler struct {
+	// todo
+}
+
 type XMLObject struct {
 	XMLName xml.Name `xml:"mainservice XMLObject"`
 
@@ -61,7 +65,7 @@ func NewMainService2(url string, tls bool, auth *BasicAuth) *MainService2 {
 	}
 }
 
-func (service *MainService2) CreateObject(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateObject(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -71,7 +75,7 @@ func (service *MainService2) CreateObject(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) UpdateBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -81,7 +85,7 @@ func (service *MainService2) UpdateBPRecord(request *String) (*XMLObject, error)
 	return response, nil
 }
 
-func (service *MainService2) CreateBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -91,7 +95,7 @@ func (service *MainService2) CreateBPRecord(request *String) (*XMLObject, error)
 	return response, nil
 }
 
-func (service *MainService2) GetDeveloperTeamMembers(request *String) (*XMLObject, error) {
+func (service *MainService2) GetDeveloperTeamMembers(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -101,7 +105,7 @@ func (service *MainService2) GetDeveloperTeamMembers(request *String) (*XMLObjec
 	return response, nil
 }
 
-func (service *MainService2) UpdateObject(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateObject(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -111,7 +115,7 @@ func (service *MainService2) UpdateObject(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) SortCostSheet(request *String) (*XMLObject, error) {
+func (service *MainService2) SortCostSheet(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -121,7 +125,7 @@ func (service *MainService2) SortCostSheet(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) CreateUser(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateUser(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -131,7 +135,7 @@ func (service *MainService2) CreateUser(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) CreateShell(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateShell(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -141,7 +145,7 @@ func (service *MainService2) CreateShell(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) UpdateScheduleActivitiesFromFileV2(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateScheduleActivitiesFromFileV2(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -151,7 +155,7 @@ func (service *MainService2) UpdateScheduleActivitiesFromFileV2(request *String)
 	return response, nil
 }
 
-func (service *MainService2) CreateScheduleActivitiesFromFileV2(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateScheduleActivitiesFromFileV2(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -161,7 +165,7 @@ func (service *MainService2) CreateScheduleActivitiesFromFileV2(request *String)
 	return response, nil
 }
 
-func (service *MainService2) GetTransactionStatus(request *String) (*XMLObject, error) {
+func (service *MainService2) GetTransactionStatus(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -171,7 +175,7 @@ func (service *MainService2) GetTransactionStatus(request *String) (*XMLObject, 
 	return response, nil
 }
 
-func (service *MainService2) UpdateScheduleActivitiesV2(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateScheduleActivitiesV2(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -181,7 +185,7 @@ func (service *MainService2) UpdateScheduleActivitiesV2(request *String) (*XMLOb
 	return response, nil
 }
 
-func (service *MainService2) CreateUpdateResource(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateUpdateResource(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -191,7 +195,7 @@ func (service *MainService2) CreateUpdateResource(request *String) (*XMLObject, 
 	return response, nil
 }
 
-func (service *MainService2) GetScheduleDataMapsDetails(request *String) (*XMLObject, error) {
+func (service *MainService2) GetScheduleDataMapsDetails(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -201,7 +205,7 @@ func (service *MainService2) GetScheduleDataMapsDetails(request *String) (*XMLOb
 	return response, nil
 }
 
-func (service *MainService2) CreateFundingStructure(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateFundingStructure(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -211,7 +215,7 @@ func (service *MainService2) CreateFundingStructure(request *String) (*XMLObject
 	return response, nil
 }
 
-func (service *MainService2) UpdateConfigurableModuleRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateConfigurableModuleRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -221,7 +225,7 @@ func (service *MainService2) UpdateConfigurableModuleRecord(request *String) (*X
 	return response, nil
 }
 
-func (service *MainService2) UpdateExchangeRates(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateExchangeRates(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -231,7 +235,7 @@ func (service *MainService2) UpdateExchangeRates(request *String) (*XMLObject, e
 	return response, nil
 }
 
-func (service *MainService2) CreateConfigurableModuleRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateConfigurableModuleRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -241,7 +245,7 @@ func (service *MainService2) CreateConfigurableModuleRecord(request *String) (*X
 	return response, nil
 }
 
-func (service *MainService2) UpdateScheduleActivities(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateScheduleActivities(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -251,7 +255,7 @@ func (service *MainService2) UpdateScheduleActivities(request *String) (*XMLObje
 	return response, nil
 }
 
-func (service *MainService2) GetProjectShellList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetProjectShellList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -261,7 +265,7 @@ func (service *MainService2) GetProjectShellList(request *String) (*XMLObject, e
 	return response, nil
 }
 
-func (service *MainService2) CreateCompleteBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateCompleteBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -271,7 +275,7 @@ func (service *MainService2) CreateCompleteBPRecord(request *String) (*XMLObject
 	return response, nil
 }
 
-func (service *MainService2) GetScheduleActivities(request *String) (*XMLObject, error) {
+func (service *MainService2) GetScheduleActivities(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -281,7 +285,7 @@ func (service *MainService2) GetScheduleActivities(request *String) (*XMLObject,
 	return response, nil
 }
 
-func (service *MainService2) GetCompleteBPRecord(request *String) (*XMLFileObject, error) {
+func (service *MainService2) GetCompleteBPRecord(request *string) (*XMLFileObject, error) {
 	response := new(XMLFileObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -291,7 +295,7 @@ func (service *MainService2) GetCompleteBPRecord(request *String) (*XMLFileObjec
 	return response, nil
 }
 
-func (service *MainService2) UpdateSapBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateSapBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -301,7 +305,7 @@ func (service *MainService2) UpdateSapBPRecord(request *String) (*XMLObject, err
 	return response, nil
 }
 
-func (service *MainService2) UpdateCompleteBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateCompleteBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -311,7 +315,7 @@ func (service *MainService2) UpdateCompleteBPRecord(request *String) (*XMLObject
 	return response, nil
 }
 
-func (service *MainService2) CreateScheduleActivitiesV2(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateScheduleActivitiesV2(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -321,7 +325,7 @@ func (service *MainService2) CreateScheduleActivitiesV2(request *String) (*XMLOb
 	return response, nil
 }
 
-func (service *MainService2) GetScheduleSheetDataMaps(request *String) (*XMLObject, error) {
+func (service *MainService2) GetScheduleSheetDataMaps(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -331,7 +335,7 @@ func (service *MainService2) GetScheduleSheetDataMaps(request *String) (*XMLObje
 	return response, nil
 }
 
-func (service *MainService2) GetScheduleSheetList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetScheduleSheetList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -341,7 +345,7 @@ func (service *MainService2) GetScheduleSheetList(request *String) (*XMLObject, 
 	return response, nil
 }
 
-func (service *MainService2) AddCompleteBPLineItem(request *String) (*XMLObject, error) {
+func (service *MainService2) AddCompleteBPLineItem(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -351,7 +355,7 @@ func (service *MainService2) AddCompleteBPLineItem(request *String) (*XMLObject,
 	return response, nil
 }
 
-func (service *MainService2) CreateScheduleActivities(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateScheduleActivities(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -361,7 +365,7 @@ func (service *MainService2) CreateScheduleActivities(request *String) (*XMLObje
 	return response, nil
 }
 
-func (service *MainService2) Ping(request *String) (*XMLObject, error) {
+func (service *MainService2) Ping(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -371,7 +375,7 @@ func (service *MainService2) Ping(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetShellList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetShellList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -381,7 +385,7 @@ func (service *MainService2) GetShellList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) AddBPLineItem(request *String) (*XMLObject, error) {
+func (service *MainService2) AddBPLineItem(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -391,7 +395,7 @@ func (service *MainService2) AddBPLineItem(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) CreateSpace(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateSpace(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -401,7 +405,7 @@ func (service *MainService2) CreateSpace(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetObjectList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetObjectList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -411,7 +415,7 @@ func (service *MainService2) GetObjectList(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) GetResourceList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetResourceList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -421,7 +425,7 @@ func (service *MainService2) GetResourceList(request *String) (*XMLObject, error
 	return response, nil
 }
 
-func (service *MainService2) GetWBSStructure(request *String) (*XMLObject, error) {
+func (service *MainService2) GetWBSStructure(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -431,7 +435,7 @@ func (service *MainService2) GetWBSStructure(request *String) (*XMLObject, error
 	return response, nil
 }
 
-func (service *MainService2) UpdateBPRecordV2(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateBPRecordV2(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -441,7 +445,7 @@ func (service *MainService2) UpdateBPRecordV2(request *String) (*XMLObject, erro
 	return response, nil
 }
 
-func (service *MainService2) GetUDRData(request *String) (*XMLObject, error) {
+func (service *MainService2) GetUDRData(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -451,7 +455,7 @@ func (service *MainService2) GetUDRData(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetWBSCodes(request *String) (*XMLObject, error) {
+func (service *MainService2) GetWBSCodes(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -461,7 +465,7 @@ func (service *MainService2) GetWBSCodes(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) UpdateSpace(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateSpace(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -471,7 +475,7 @@ func (service *MainService2) UpdateSpace(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetExchangeRates(request *String) (*XMLObject, error) {
+func (service *MainService2) GetExchangeRates(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -481,7 +485,7 @@ func (service *MainService2) GetExchangeRates(request *String) (*XMLObject, erro
 	return response, nil
 }
 
-func (service *MainService2) GetLevelList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetLevelList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -491,7 +495,7 @@ func (service *MainService2) GetLevelList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) CreateAsset(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateAsset(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -501,7 +505,7 @@ func (service *MainService2) CreateAsset(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) UpdateShell(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateShell(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -511,7 +515,7 @@ func (service *MainService2) UpdateShell(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetSOV(request *String) (*XMLObject, error) {
+func (service *MainService2) GetSOV(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -521,7 +525,7 @@ func (service *MainService2) GetSOV(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetRoleList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetRoleList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -531,7 +535,7 @@ func (service *MainService2) GetRoleList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) CreateUpdateRole(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateUpdateRole(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -541,7 +545,7 @@ func (service *MainService2) CreateUpdateRole(request *String) (*XMLObject, erro
 	return response, nil
 }
 
-func (service *MainService2) UpdateLevel(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateLevel(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -551,7 +555,7 @@ func (service *MainService2) UpdateLevel(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetColumnData(request *String) (*XMLObject, error) {
+func (service *MainService2) GetColumnData(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -561,7 +565,7 @@ func (service *MainService2) GetColumnData(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) CreateWBS(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateWBS(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -571,7 +575,7 @@ func (service *MainService2) CreateWBS(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetSpaceList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetSpaceList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -581,7 +585,7 @@ func (service *MainService2) GetSpaceList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetBPList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetBPList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -591,7 +595,7 @@ func (service *MainService2) GetBPList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) CreateLevel(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateLevel(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -601,7 +605,7 @@ func (service *MainService2) CreateLevel(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) GetBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -611,7 +615,7 @@ func (service *MainService2) GetBPRecord(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) UpdateColumnData(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateColumnData(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -621,7 +625,7 @@ func (service *MainService2) UpdateColumnData(request *String) (*XMLObject, erro
 	return response, nil
 }
 
-func (service *MainService2) CreateProject(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateProject(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -631,7 +635,7 @@ func (service *MainService2) CreateProject(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) GetPlanningItem(request *String) (*XMLObject, error) {
+func (service *MainService2) GetPlanningItem(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -641,7 +645,7 @@ func (service *MainService2) GetPlanningItem(request *String) (*XMLObject, error
 	return response, nil
 }
 
-func (service *MainService2) GetSapBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) GetSapBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -651,7 +655,7 @@ func (service *MainService2) GetSapBPRecord(request *String) (*XMLObject, error)
 	return response, nil
 }
 
-func (service *MainService2) UpdateUser(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateUser(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -661,7 +665,7 @@ func (service *MainService2) UpdateUser(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetBidderInfo(request *String) (*XMLObject, error) {
+func (service *MainService2) GetBidderInfo(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -671,7 +675,7 @@ func (service *MainService2) GetBidderInfo(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) ClearBidderInfo(request *String) (*XMLObject, error) {
+func (service *MainService2) ClearBidderInfo(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -681,7 +685,7 @@ func (service *MainService2) ClearBidderInfo(request *String) (*XMLObject, error
 	return response, nil
 }
 
-func (service *MainService2) UpdateOIMUser(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateOIMUser(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -691,7 +695,7 @@ func (service *MainService2) UpdateOIMUser(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) GetSapBPList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetSapBPList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -701,7 +705,7 @@ func (service *MainService2) GetSapBPList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) GetUserList(request *String) (*XMLObject, error) {
+func (service *MainService2) GetUserList(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -711,7 +715,7 @@ func (service *MainService2) GetUserList(request *String) (*XMLObject, error) {
 	return response, nil
 }
 
-func (service *MainService2) CreateOIMUser(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateOIMUser(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -721,7 +725,7 @@ func (service *MainService2) CreateOIMUser(request *String) (*XMLObject, error) 
 	return response, nil
 }
 
-func (service *MainService2) CreateSapBPRecord(request *String) (*XMLObject, error) {
+func (service *MainService2) CreateSapBPRecord(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -731,7 +735,7 @@ func (service *MainService2) CreateSapBPRecord(request *String) (*XMLObject, err
 	return response, nil
 }
 
-func (service *MainService2) UpdateUserGroupMembership(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateUserGroupMembership(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -741,7 +745,7 @@ func (service *MainService2) UpdateUserGroupMembership(request *String) (*XMLObj
 	return response, nil
 }
 
-func (service *MainService2) UpdateUserShellMembership(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateUserShellMembership(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -751,7 +755,7 @@ func (service *MainService2) UpdateUserShellMembership(request *String) (*XMLObj
 	return response, nil
 }
 
-func (service *MainService2) UpdateWBS(request *String) (*XMLObject, error) {
+func (service *MainService2) UpdateWBS(request *string) (*XMLObject, error) {
 	response := new(XMLObject)
 	err := service.client.Call("", request, response)
 	if err != nil {
@@ -870,7 +874,7 @@ func NewSOAPClient(url string, tls bool, auth *BasicAuth) *SOAPClient {
 
 func (s *SOAPClient) Call(soapAction string, request, response interface{}) error {
 	envelope := SOAPEnvelope{
-	//Header:        SoapHeader{},
+		//Header:        SoapHeader{},
 	}
 
 	envelope.Body.Content = request

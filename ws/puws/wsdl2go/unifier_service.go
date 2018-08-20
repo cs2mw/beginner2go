@@ -236,6 +236,10 @@ type ArrayOf_xsd_string struct {
 	Items []*string `xml:"item,omitempty" json:"item,omitempty" yaml:"item,omitempty"`
 }
 
+type DataHandler struct {
+	// todo
+}
+
 // FileObject was auto-generated from WSDL.
 type FileObject struct {
 	Datahandler *DataHandler `xml:"datahandler,omitempty" json:"datahandler,omitempty" yaml:"datahandler,omitempty"`
