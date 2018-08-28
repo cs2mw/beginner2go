@@ -31,8 +31,8 @@ func login(w http.ResponseWriter, r *http.Request) {
 		log.Println(t.Execute(w, nil))
 	} else {
 		r.ParseForm()
-		fmt.Println("username:", r.Form["username"])
-		fmt.Println("password:", r.Form["password"])
+		fmt.Fprintf(w, r.Form["username"][0])
+		fmt.Fprintf(w, r.Form["password"][0])
 	}
 }
 
