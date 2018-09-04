@@ -21,6 +21,12 @@ func main() {
 	}
 	defer stmtCount.Close()
 
+	stmtSum, err := db.Prepare("select sum(Population) from city where CountryCode=?")
+	if err != nil {
+		panic(err.Error)
+	}
+	defer stmtSum.Close()
+
 	stmtOut, err := db.Prepare("SELECT Name,CountryCode,District,Population FROM city WHERE CountryCode = ? order by Name asc,District desc")
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
@@ -64,4 +70,11 @@ func main() {
 		count++
 		fmt.Printf("Row %d:%s,%s,%s,%d \n", count, name, countryCode, district, population)
 	}
+
+	var rowsSum int
+	err = stmtSum.QueryRow("DZA").Scan(&rowsSum)
+	if err != nil {
+		panic(err.Error())
+	}
+	fmt.Printf("The city which country code is DZA contains:%d \n people.", rowsSum)
 }
