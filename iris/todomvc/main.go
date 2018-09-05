@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/cs2mw/beginner2go/todomvc/web/controllers"
+	"github.com/cs2mw/beginner2go/iris/todomvc/web/controllers"
 
-	"github.com/cs2mw/beginner2go/todomvc/todo"
+	"github.com/cs2mw/beginner2go/iris/todomvc/todo"
 
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/sessions"
@@ -20,7 +20,7 @@ func main() {
 	// no need for any server-side template here,
 	// actually if you're going to just use vue without any
 	// back-end services, you can just stop afer this line and start the server.
-	app.StaticWeb("/", "./public")
+	app.StaticWeb("/", "./web/public")
 
 	// configure the http sessions.
 	sess := sessions.New(sessions.Config{

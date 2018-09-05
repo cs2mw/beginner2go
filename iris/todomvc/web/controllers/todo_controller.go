@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/cs2mw/beginner2go/todomvc/todo"
+	"github.com/cs2mw/beginner2go/iris/todomvc/todo"
 
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/mvc"
@@ -51,6 +51,7 @@ func (c *TodoController) Post(newItems []todo.Item) PostItemResponse {
 	return PostItemResponse{Success: true}
 }
 
+// GetSync ...
 func (c *TodoController) GetSync(conn websocket.Connection) {
 	conn.Join(c.Session.ID())
 	conn.On("save", func() { // "save" event from client.
