@@ -6,6 +6,5 @@ import "github.com/kataras/iris/middleware/basicauth"
 var BasicAuth = basicauth.New(basicauth.Config{
 	Users: map[string]string{
 		"admin": "password",
-		"cs2mw": "mw2cs",
 	},
 })

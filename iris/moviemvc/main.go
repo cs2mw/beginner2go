@@ -16,7 +16,7 @@ func main() {
 	app.Logger().SetLevel("debug")
 
 	// Load the template files.
-	app.RegisterView(iris.HTML("./web/views", ".html"))
+	app.RegisterView(iris.HTML("./web/views", ".tpl"))
 
 	// Serve our controllers.
 	mvc.New(app.Party("/hello")).Handle(new(controllers.HelloController))

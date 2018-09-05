@@ -11,7 +11,7 @@ import (
 type HelloController struct{}
 
 var helloView = mvc.View{
-	Name: "hello/index.html",
+	Name: "hello/index.tpl",
 	Data: map[string]interface{}{
 		"Title":     "Hello Page",
 		"MyMessage": "Welcome to my awesome website",
@@ -50,7 +50,7 @@ func (c *HelloController) GetBy(name string) mvc.Result {
 
 	// return mvc.Response{Text: "Hello " + name} OR:
 	return mvc.View{
-		Name: "hello/name.html",
+		Name: "hello/name.tpl",
 		Data: name,
 	}
 }

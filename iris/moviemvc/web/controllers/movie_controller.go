@@ -3,7 +3,7 @@ package controllers
 import (
 	"errors"
 
-	"github.com/cs2mw/beginner2go/iris/moviemvc/datamodels"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/models"
 	"github.com/cs2mw/beginner2go/iris/moviemvc/services"
 
 	"github.com/kataras/iris"
@@ -30,25 +30,25 @@ type MovieController struct {
 // 	return
 // }
 // otherwise just return the datamodels.
-func (c *MovieController) Get() (results []datamodels.Movie) {
+func (c *MovieController) Get() (results []models.Movie) {
 	return c.Service.GetAll()
 }
 
 // GetBy returns a movie.
 // Demo:
 // curl -i http://localhost:8080/movies/1
-func (c *MovieController) GetBy(id int64) (movie datamodels.Movie, found bool) {
+func (c *MovieController) GetBy(id int64) (movie models.Movie, found bool) {
 	return c.Service.GetByID(id) // it will throw 404 if not found.
 }
 
 // PutBy updates a movie.
 // Demo:
 // curl -i -X PUT -F "genre=Thriller" -F "poster=@/Users/kataras/Downloads/out.gif" http://localhost:8080/movies/1
-func (c *MovieController) PutBy(ctx iris.Context, id int64) (datamodels.Movie, error) {
+func (c *MovieController) PutBy(ctx iris.Context, id int64) (models.Movie, error) {
 	// get the request data for poster and genre
 	file, info, err := ctx.FormFile("poster")
 	if err != nil {
-		return datamodels.Movie{}, errors.New("failed due form file 'poster' missing")
+		return models.Movie{}, errors.New("failed due form file 'poster' missing")
 	}
 	// we don't need the file so close it now.
 	file.Close()

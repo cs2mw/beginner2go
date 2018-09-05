@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/cs2mw/beginner2go/iris/moviemvc/datamodels"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/models"
 	"github.com/cs2mw/beginner2go/iris/moviemvc/repositories"
 )
 
@@ -12,10 +12,10 @@ import (
 // It's an interface and it's used as interface everywhere
 // because we may need to change or try an experimental different domain logic at the future.
 type MovieService interface {
-	GetAll() []datamodels.Movie
-	GetByID(id int64) (datamodels.Movie, bool)
+	GetAll() []models.Movie
+	GetByID(id int64) (models.Movie, bool)
 	DeleteByID(id int64) bool
-	UpdatePosterAndGenreByID(id int64, poster string, genre string) (datamodels.Movie, error)
+	UpdatePosterAndGenreByID(id int64, poster string, genre string) (models.Movie, error)
 }
 
 // NewMovieService returns the default movie service.
@@ -30,23 +30,23 @@ type movieService struct {
 }
 
 // GetAll returns all movies.
-func (s *movieService) GetAll() []datamodels.Movie {
-	return s.repo.SelectMany(func(_ datamodels.Movie) bool {
+func (s *movieService) GetAll() []models.Movie {
+	return s.repo.SelectMany(func(_ models.Movie) bool {
 		return true
 	}, -1)
 }
 
 // GetByID returns a movie based on its id.
-func (s *movieService) GetByID(id int64) (datamodels.Movie, bool) {
-	return s.repo.Select(func(m datamodels.Movie) bool {
+func (s *movieService) GetByID(id int64) (models.Movie, bool) {
+	return s.repo.Select(func(m models.Movie) bool {
 		return m.ID == id
 	})
 }
 
 // UpdatePosterAndGenreByID updates a movie's poster and genre.
-func (s *movieService) UpdatePosterAndGenreByID(id int64, poster string, genre string) (datamodels.Movie, error) {
+func (s *movieService) UpdatePosterAndGenreByID(id int64, poster string, genre string) (models.Movie, error) {
 	// update the movie and return it.
-	return s.repo.InsertOrUpdate(datamodels.Movie{
+	return s.repo.InsertOrUpdate(models.Movie{
 		ID:     id,
 		Poster: poster,
 		Genre:  genre,
@@ -57,7 +57,7 @@ func (s *movieService) UpdatePosterAndGenreByID(id int64, poster string, genre s
 //
 // Returns true if deleted otherwise false.
 func (s *movieService) DeleteByID(id int64) bool {
-	return s.repo.Delete(func(m datamodels.Movie) bool {
+	return s.repo.Delete(func(m models.Movie) bool {
 		return m.ID == id
 	}, 1)
 }

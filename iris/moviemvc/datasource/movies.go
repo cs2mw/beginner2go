@@ -1,9 +1,9 @@
 package datasource
 
-import "github.com/cs2mw/beginner2go/iris/moviemvc/datamodels"
+import "github.com/cs2mw/beginner2go/iris/moviemvc/models"
 
 // Movies is our imaginary data source.
-var Movies = map[int64]datamodels.Movie{
+var Movies = map[int64]models.Movie{
 	1: {
 		ID:     1,
 		Name:   "Casablanca",
