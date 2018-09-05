@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/cs2mw/beginner2go/iris/mvc/datamodels"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/datamodels"
 )
 
 // Query represents the visitor and action queries.

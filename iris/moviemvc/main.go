@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/cs2mw/beginner2go/iris/mvc/datasource"
-	"github.com/cs2mw/beginner2go/iris/mvc/repositories"
-	"github.com/cs2mw/beginner2go/iris/mvc/services"
-	"github.com/cs2mw/beginner2go/iris/mvc/web/controllers"
-	"github.com/cs2mw/beginner2go/iris/mvc/web/middleware"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/datasource"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/repositories"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/services"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/web/controllers"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/web/middleware"
 
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/mvc"

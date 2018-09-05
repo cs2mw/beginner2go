@@ -3,8 +3,8 @@ package controllers
 import (
 	"errors"
 
-	"github.com/cs2mw/beginner2go/iris/mvc/datamodels"
-	"github.com/cs2mw/beginner2go/iris/mvc/services"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/datamodels"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/services"
 
 	"github.com/kataras/iris"
 )

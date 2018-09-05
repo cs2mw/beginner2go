@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/cs2mw/beginner2go/iris/mvc/datamodels"
-	"github.com/cs2mw/beginner2go/iris/mvc/repositories"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/datamodels"
+	"github.com/cs2mw/beginner2go/iris/moviemvc/repositories"
 )
 
 // MovieService handles some of the CRUID operations of the movie datamodel.
